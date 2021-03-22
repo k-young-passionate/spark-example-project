@@ -8,6 +8,27 @@ This was built by the Data Science team at [Snowplow Analytics] [snowplow], who 
 
 _See also:_ [Spark Streaming Example Project] [spark-streaming-example-project] | [Scalding Example Project] [scalding-example-project]
 
+## Environment Setting
+1. Install all necessary softwares
+```zsh
+brew install --cask virtualbox
+brew install --cask vagrant
+brew install --cask vagrant-manager
+
+brew install sbt
+```
+
+1. Set sbt repositories
+    - `~/.sbt/repositories`
+        ```zsh
+        [repositories]
+        bintray-sbt-plugins: http://dl.bintray.com/sbt/sbt-plugin-releases,allowInsecureProtocol
+        ```
+    - `{PATH}/{TO}/{YOUR}/{REPOSITORY}/vagrant/project/plugin.sbt`
+        ```zsh
+        addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.6")
+        ```
+
 ## Building
 
 Assuming git, [Vagrant] [vagrant-install] and [VirtualBox] [virtualbox-install] installed:
