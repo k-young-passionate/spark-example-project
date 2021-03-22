@@ -17,14 +17,17 @@ _See also:_ [Spark Streaming Example Project] [spark-streaming-example-project] 
 
     brew install sbt
     ```
-
+1. Clone the repository
+    ```zsh
+    git clone https://github.com/snowplow/spark-example-project
+    ```
 1. Set sbt repositories
     - `~/.sbt/repositories`
         ```zsh
         [repositories]
         bintray-sbt-plugins: http://dl.bintray.com/sbt/sbt-plugin-releases,allowInsecureProtocol
         ```
-    - `{PATH}/{TO}/{YOUR}/{REPOSITORY}/vagrant/project/plugin.sbt`
+    - `{PATH}/{TO}/{YOUR}/{REPOSITORY}/spark-example-project/vagrant/project/plugin.sbt`
         ```zsh
         addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.6")
         ```
