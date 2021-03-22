@@ -10,13 +10,13 @@ _See also:_ [Spark Streaming Example Project] [spark-streaming-example-project] 
 
 ## Environment Setting
 1. Install all necessary softwares
-```zsh
-brew install --cask virtualbox
-brew install --cask vagrant
-brew install --cask vagrant-manager
+    ```zsh
+    brew install --cask virtualbox
+    brew install --cask vagrant
+    brew install --cask vagrant-manager
 
-brew install sbt
-```
+    brew install sbt
+    ```
 
 1. Set sbt repositories
     - `~/.sbt/repositories`
