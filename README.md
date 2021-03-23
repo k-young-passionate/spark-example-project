@@ -9,29 +9,13 @@ This was built by the Data Science team at [Snowplow Analytics] [snowplow], who 
 _See also:_ [Spark Streaming Example Project] [spark-streaming-example-project] | [Scalding Example Project] [scalding-example-project]
 
 ## Environment Setting
-1. Install all necessary softwares
-    ```zsh
-    brew install --cask virtualbox
-    brew install --cask vagrant
-    brew install --cask vagrant-manager
-
-    brew install sbt
-    ```
-1. Clone the repository
-    ```zsh
-    git clone https://github.com/snowplow/spark-example-project
-    ```
-1. Set sbt repositories
-    - `~/.sbt/repositories`
-        ```zsh
-        [repositories]
-        bintray-sbt-plugins: http://dl.bintray.com/sbt/sbt-plugin-releases,allowInsecureProtocol
-        ```
-    - `{PATH}/{TO}/{YOUR}/{REPOSITORY}/spark-example-project/vagrant/project/plugin.sbt`
-        ```zsh
-        addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.6")
-        ```
-
+Install all necessary softwares
+```zsh
+brew install --cask virtualbox
+brew install --cask vagrant
+brew install --cask vagrant-manager
+```
+    
 ## Building
 
 Assuming git, [Vagrant] [vagrant-install] and [VirtualBox] [virtualbox-install] installed:
@@ -41,6 +25,9 @@ Assuming git, [Vagrant] [vagrant-install] and [VirtualBox] [virtualbox-install] 
  host> cd spark-example-project
  host> vagrant up && vagrant ssh
 guest> cd /vagrant
+guest> sudo apt-get update
+guest> sudo apt-get install sbt
+guest> sudo apt-get install java
 guest> sbt assembly
 ```
 
